@@ -1,0 +1,22 @@
+.contentA {
+  border: 1px solid red;
+  padding: 46px;
+  padding-top: 90px;
+  width: 50%;
+  height: 90px;
+  margin-top: 16px;
+}
+
+.contentB {
+  border: 2px solid yellow;
+  padding: 20px;
+  width: 70%;
+  height: 105px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 23px;
+  margin-top: 20px;
+  color: darkviolet;
+}
