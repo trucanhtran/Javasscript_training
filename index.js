@@ -1,10 +1,12 @@
 var person = {
   firstName: "John",
   lastname: "Doe",
-  language: "NO",
-  set lang(value) {
-    this.language = value;
+  fullname: function () {
+    return this.firstName + " " + this.lastname;
+  },
+  get fullname1() {
+    return this.firstName + " " + this.lastname;
   },
 };
-person.lang = "en";
-document.getElementById("demo").innerHTML = person.language;
+document.getElementById("demo").innerHTML =
+  person.fullname() + person.fullname1();
