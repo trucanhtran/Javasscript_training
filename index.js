@@ -1,9 +1,10 @@
 var person = {
   firstName: "John",
   lastname: "Doe",
-  language: "en",
-  get lang() {
-    return this.language;
+  language: "NO",
+  set lang(value) {
+    this.language = value;
   },
 };
-document.getElementById("demo").innerHTML = person.lang;
+person.lang = "en";
+document.getElementById("demo").innerHTML = person.language;
