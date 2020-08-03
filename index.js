@@ -9,4 +9,4 @@ var person = {
   },
 };
 document.getElementById("demo").innerHTML =
-  person.fullname() + person.fullname1();
+  person.fullname() + " " + person.fullname1;
