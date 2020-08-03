@@ -1,16 +1,32 @@
-var person = {
-  firstName: "John",
-  lastname: "Doe",
-  language: "en",
-  fullname: function () {
-    return this.firstName + " " + this.lastname;
+var obj = { counter: 0 };
+Object.defineProperty(obj, "reset", {
+  get: function () {
+    this.counter = 0;
   },
-  get fullname1() {
-    return this.firstName + " " + this.lastname;
+});
+Object.defineProperty(obj, "increment", {
+  get: function () {
+    this.counter++;
   },
-  get lang() {
-    return this.language.toUpperCase();
+});
+Object.defineProperty(obj, "decrement", {
+  get: function () {
+    this.counter--;
   },
-};
-document.getElementById("demo").innerHTML =
-  person.fullname() + " " + person.fullname1 + " " + person.lang;
+});
+Object.defineProperty(obj, "add", {
+  set: function (value) {
+    this.counter += value;
+  },
+});
+Object.defineProperty(obj, "subtract", {
+  set: function (value) {
+    this.counter -= value;
+  },
+});
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+document.getElementById("demo").innerHTML = obj.counter;
