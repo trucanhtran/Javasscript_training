@@ -1,32 +1,10 @@
-var obj = { counter: 0 };
-Object.defineProperty(obj, "reset", {
-  get: function () {
-    this.counter = 0;
-  },
-});
-Object.defineProperty(obj, "increment", {
-  get: function () {
-    this.counter++;
-  },
-});
-Object.defineProperty(obj, "decrement", {
-  get: function () {
-    this.counter--;
-  },
-});
-Object.defineProperty(obj, "add", {
-  set: function (value) {
-    this.counter += value;
-  },
-});
-Object.defineProperty(obj, "subtract", {
-  set: function (value) {
-    this.counter -= value;
-  },
-});
-obj.reset;
-obj.add = 5;
-obj.subtract = 1;
-obj.increment;
-obj.decrement;
-document.getElementById("demo").innerHTML = obj.counter;
+function Person(first, last, age, eye) {
+  this.firstname = first;
+  this.lastname = last;
+  this.age = age;
+  this.eyecolor = eye;
+}
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+document.getElementById("demo").innerHTML =
+  "My father is " + myFather.age + ". My mother is " + myMother.age;
